@@ -1,0 +1,30 @@
+Question:
+Write a C++ program to generate the Fibonacci series up to a given number 'n'. The Fibonacci sequence is characterized by the fact that every number after the first two is the sum of the two preceding ones.
+
+
+Solution:
+
+#include <iostream>
+using namespace std;
+
+
+void generateFibonacci(int n){
+    int first=0,second=1,next;
+    
+    for (int i=1;i<=n;i++){
+        cout<<first << " ";
+        next=first+second;
+        first=second;
+        second=next;
+    };
+    cout<<endl;
+};
+int main() {
+    int value;
+    cout<< "Enter the value to create the Fibonacci Series up to: ";
+    cin>> value;
+    
+    generateFibonacci(value);
+    
+    return 0;
+}
