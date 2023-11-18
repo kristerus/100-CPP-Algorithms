@@ -1,0 +1,42 @@
+Design a program that performs the following operations on an array of integers:
+
+    Initialize an array of a given size.
+    Input elements into the array.
+    Display the elements in reverse order.
+
+
+Solution:
+
+#include<bits/stdc++.h>
+#include <iostream>
+using namespace std;
+
+void reverse(int arr[], int n){
+    reverse(arr,arr+n);
+}
+void printArray(int arr[], int n){
+     for(int i=0;i<n;i++)
+         cout << arr[i] << " ";
+}
+
+int main(){
+    int arr[] = {3,2,4,2,525,52};
+    int n = sizeof arr/sizeof arr[0];
+    reverse(arr,n);
+    printArray(arr,n);
+    int smallest=arr[0];
+    int biggest=arr[0];
+    for( int i=0;i<sizeof(arr)/sizeof(int);i++){
+        if(arr[i]<smallest){
+            smallest=arr[i];
+        };
+    };
+     for( int i=0;i<sizeof(arr)/sizeof(int);i++){
+        if(arr[i]>biggest){
+            biggest=arr[i];
+        };
+    };
+    cout<<"\n"<<"Smallest is: "<<smallest<<"\n";
+    cout<<"Largest is: "<<biggest;
+    return 0;
+}
