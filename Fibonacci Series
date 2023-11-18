@@ -1,30 +1,24 @@
 Question:
-Write a C++ program to generate the Fibonacci series up to a given number 'n'. The Fibonacci sequence is characterized by the fact that every number after the first two is the sum of the two preceding ones.
-
+Write a C++ program to print the Fibonacci series up to a given number 'n'. The Fibonacci series is a sequence of numbers where each number is the sum of the two preceding ones, starting from 0 and 1. For example, the Fibonacci series up to 'n = 10' would be: 0, 1, 1, 2, 3, 5, 8.
 
 Solution:
 
 #include <iostream>
 using namespace std;
 
-
 void generateFibonacci(int n){
     int first=0,second=1,next;
-    
-    for (int i=1;i<=n;i++){
-        cout<<first << " ";
+    for(int i=0;i<n;i++){
+        cout<<first <<", ";
         next=first+second;
         first=second;
         second=next;
     };
-    cout<<endl;
 };
+
 int main() {
-    int value;
-    cout<< "Enter the value to create the Fibonacci Series up to: ";
-    cin>> value;
-    
-    generateFibonacci(value);
-    
+    int n;
+    cin>> n;
+    generateFibonacci(n);
     return 0;
 }
