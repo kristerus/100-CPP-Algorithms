@@ -1,0 +1,6 @@
+Implement a singly linked list in C++ and write functions to:
+
+    Insert a node at the beginning of the linked list.
+    Delete a node with a given value from the linked list.
+    Print the elements of the linked list.
+
