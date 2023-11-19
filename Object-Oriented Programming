@@ -1,0 +1,50 @@
+Create a class named "Rectangle" in C++ that has the following:
+
+    Private attributes: length and width
+    Public member functions:
+        A function to set the dimensions of the rectangle.
+        A function to calculate and return the area of the rectangle.
+        A function to calculate and return the perimeter of the rectangle.
+
+
+
+Solution:
+
+#include <iostream>
+using namespace std;
+
+class rectangle{
+    private:
+    
+    double width,length;
+    
+    public:
+    void setDimensions(double l, double w){
+        if(l>0 && w>0){
+            length=l;
+            width=w;
+        }
+        else {
+            cout << "Invalid dimensions. Length and width should be positive numbers."<< endl;
+        };
+    }
+    double calculateArea(){
+        return length*width;
+    };
+    double calculatePerimeter(){
+        return 2*(length+width);
+    };
+    
+};
+
+int main() {
+    double width,length;
+    cout<<"Enter the length and width values of the rectangle: ";
+    cin>>length>>width;
+    rectangle Rect;
+    Rect.setDimensions(length,width);
+    cout<<"The area of the rectangle with the specified values is: "<<Rect.calculateArea()<<"\n";
+    cout<<"The perimeter of the rectangle with the specified values is: "<<Rect.calculatePerimeter();
+    
+    return 0;
+};
