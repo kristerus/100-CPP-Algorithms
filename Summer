@@ -1,0 +1,19 @@
+Question:
+
+Implement a program to find the sum of all numbers between two integers.
+
+Solution:
+
+#include <iostream>
+using namespace std;
+#include <string>
+
+
+int main()
+{
+    int a, b;
+    cout<<"Enter two numbers to sum up: ";
+    cin>>a>>b;
+    cout<<a+b;
+    return 0;
+}
