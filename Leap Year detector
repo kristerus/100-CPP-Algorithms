@@ -1,0 +1,23 @@
+Question:
+
+Implement a C++ program to check if a given year is a leap year or not.
+
+
+Solution:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x;
+    cout<<"Enter year to find out whether it is a leap year or no: ";
+    cin>> x;
+    if(x%4==0 && x%100!=0){
+        cout<<"The year entered is a leap year.";
+    }
+    else{
+        cout<<"The entered year is not a leap year.";
+    };
+
+    return 0;
+}
