@@ -1,0 +1,19 @@
+Question:
+
+Write a function to calculate the area of a circle given its radius.
+
+
+Solution:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x;
+    cout<<"Enter radius: ";
+    cin>> x;
+    double area=x*x*3.14;
+    cout<<"The area of the circle is:"<<area;
+    return 0;
+}
+
