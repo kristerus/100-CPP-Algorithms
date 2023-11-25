@@ -1,0 +1,31 @@
+Question:
+
+Write a program to check if a given number is prime or not.
+
+Solution:
+
+#include <iostream>
+using namespace std;
+#include <string>
+
+int main()
+{
+    int a;
+    cout<<"Enter the number to find out : ";
+    cin>>a;
+    bool primer=true;
+    for (int i=2;i<a;i++){
+        if(a%i==0){
+            cout<<"The number is not prime";
+            primer=false;
+            break;
+        }
+        else{
+            primer=true;
+        };
+    };
+    if(primer==true){
+        cout<<"The number is prime";
+    };
+    return 0;
+}
