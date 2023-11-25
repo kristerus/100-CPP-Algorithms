@@ -1,0 +1,32 @@
+Question:
+
+Create a program to convert temperature from Celsius to Fahrenheit and vice versa.
+
+
+Solution:
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string conversion;
+    cout<<"Pick the conversion method: ctf or ftc: ";
+    cin>>conversion;
+    if(conversion=="ctf"){
+    int x;
+    cout<<"Enter temperature in celsius: ";
+    cin>> x;
+    double fahrenheit=x*9.5+32;
+    cout<<"The temperature in fahrenheit is "<<fahrenheit<<" degrees.";
+    }
+    else{
+    int x;
+    cout<<"Enter temperature in fahrenheit: ";
+    cin>> x;
+    double celsius=(x-32)*5/9;
+    cout<<"The temperature in celsius is "<<celsius<<" degrees.";
+    };
+
+    return 0;
+}
