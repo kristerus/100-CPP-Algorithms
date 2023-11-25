@@ -1,0 +1,23 @@
+Question:
+
+Develop a C++ program to find the largest element in an array.
+
+
+Solution:
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    int largest=0;
+    int arrayed[6]={1,2,3,5,6,7};
+    for(int i=0;i<6;i++){
+        if(arrayed[i]>largest){
+            largest=arrayed[i];
+        };
+    };
+    cout<<largest;
+    return 0;
+}
