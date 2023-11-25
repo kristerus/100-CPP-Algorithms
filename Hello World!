@@ -1,0 +1,14 @@
+Question:
+
+Write a C++ program to print "Hello, World!" to the console.
+
+
+Solution:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Hello, world!";
+    return 0;
+}
