@@ -1,10 +1,10 @@
-# 100-CPP-Algorithms
+# 50-CPP-Algorithms
 
 **Description:**
-Welcome to the C++ Problem Set Repository—an extensive collection of 100 C++ programming challenges tailored to augment your coding prowess! This repository aims to offer a diverse range of problems encompassing various difficulty levels, from fundamental exercises to intricate concepts, ensuring a comprehensive learning experience for programmers of all proficiencies.
+Welcome to the C++ Problem Set Repository—an extensive collection of 50 C++ programming challenges tailored to augment your coding prowess! This repository aims to offer a diverse range of problems encompassing various difficulty levels, from fundamental exercises to intricate concepts, ensuring a comprehensive learning experience for programmers of all proficiencies.
 
 **Features:**
-- **100 C++ Problems:** Immerse yourself in a curated compilation of C++ challenges covering an array of topics, including data structures, algorithms, string manipulation, logic puzzles, and more.
+- **50 C++ Problems:** Immerse yourself in a curated compilation of C++ challenges covering an array of topics, including data structures, algorithms, string manipulation, logic puzzles, and more.
 - **Clear Problem Statements:** Each problem is accompanied by a concise and lucid problem statement, outlining the task to be accomplished.
 - **Optimal Solutions:** Explore optimal solutions for each problem, gaining insights into different approaches and best practices for tackling specific coding challenges.
 - **Contributions:** Open to contributions! Feel free to submit your own problem solutions or propose new problems to expand the repository and create a collaborative learning environment.
