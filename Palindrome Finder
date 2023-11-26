@@ -1,0 +1,34 @@
+Question:
+
+Implement a program to check if a number is a palindrome.
+
+Solution:
+
+
+#include <vector>
+#include <algorithm>
+#include <string>
+#include <iostream>
+using namespace std;
+
+
+void reverser(){
+    string n;
+    cout<<"Enter the number to find out whether it is a palindrome or not: ";
+    cin>>n;
+    string m=n;
+    reverse(m.begin(),m.end());
+    if(m==n){
+        cout<<"The number is a palindrome";
+    }
+    else{
+        cout<<"The number is not a palindrome";
+    };
+};
+
+int main() {
+    reverser();
+    return 0;
+}
+
+
