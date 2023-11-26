@@ -1,0 +1,29 @@
+Question:
+
+Write a program to find the LCM (Least Common Multiple) of two numbers.
+
+
+Solution:
+
+#include <iostream>
+
+int gcd(int a, int b) {
+    return b == 0 ? a : gcd(b, a % b);
+}
+
+int lcm(int a, int b) {
+    return (a * b) / gcd(a, b);
+}
+
+int main() {
+    int num1, num2;
+    std::cout << "Enter first number: ";
+    std::cin >> num1;
+    std::cout << "Enter second number: ";
+    std::cin >> num2;
+
+    int result = lcm(num1, num2);
+    std::cout << "The LCM of " << num1 << " and " << num2 << " is: " << result << std::endl;
+
+    return 0;
+}
