@@ -1,0 +1,39 @@
+Question:
+
+Develop a C++ program to display all prime numbers between two intervals.
+
+
+Solution:
+
+
+#include <vector>
+#include <algorithm>
+#include <string>
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    int n,m;
+    cout<<"Enter the beginning and the end of the interval(beginning included, ending not): ";
+    cin>>n>>m;
+    bool primer=true;
+    for(int i=n;i<m;i++){
+        for(int j=2;j<i;j++){
+            if(i%j==0){
+                cout<<"The number "<<i<<" is not prime."<<"\n";
+                primer=false;
+                break;
+            }
+            else{
+                primer=true;
+            };
+        };
+         if(primer==true){
+        cout<<"Number "<<i<<" is prime."<<"\n";
+    };
+    }
+   
+    return 0;
+}
+
