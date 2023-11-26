@@ -1,0 +1,18 @@
+Question:
+
+Create a program to display the multiplication table of a given integer.
+
+Solution:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num;
+    cout << "Enter a number to show its multiplication table: ";
+    cin >> num;
+    for(int i=1;i<11;i++){
+        cout<<num<<" * "<<i<<" = "<<num*i<<"\n";
+    }
+    return 0;
+}
