@@ -1,0 +1,58 @@
+Question:
+
+Write a program to demonstrate polymorphism using virtual functions.
+
+
+Solution:
+
+
+#include <iostream>
+
+using namespace std;
+
+class Vehicle{
+    public:
+    string brand;
+    int year;
+    int getYear(){
+        return year;
+    };
+    string getBrand(){
+        return brand;
+    };
+    void vehicleNoise(){
+        cout<<"*Different vehicle noises.*";
+    };
+};
+
+class Car: public Vehicle{
+    public:
+    int wheelNumber;
+    int getWheelNumber(){
+        return wheelNumber;
+    };
+    void vehicleNoise(){
+        cout<<"vrumvrum"<<endl;
+    };
+};
+
+class Bicycle: public Vehicle{
+    public:
+    void vehicleNoise(){
+        cout<<"vzzvzz"<<endl;
+    };
+};
+int main(){
+    Car myCar;
+    Bicycle myBike;
+    myCar.year=2005;
+    myCar.brand="Benz";
+    myCar.wheelNumber=4;
+    cout<<myCar.getYear()<<endl;
+    cout<<myCar.getBrand()<<endl;
+    cout<<myCar.getWheelNumber()<<endl;
+    myCar.vehicleNoise();
+    myBike.vehicleNoise();
+
+return 0;
+}
