@@ -1,0 +1,28 @@
+Question:
+
+Create a program to find the length of a string without using library functions.
+
+
+Solution:
+
+
+#include <iostream>
+#include <string>;
+using namespace std;
+
+int main() {
+    string inputted;
+    cout<<"Enter the string to find the length of: \n";
+    cin>>inputted;
+    
+    string value=inputted;
+    int length=0;
+    
+    int i=0;
+    while(value[i]){
+        length+=1;
+        i++;
+    };
+    cout<<length;
+    return 0;
+}
