@@ -1,0 +1,32 @@
+Question:
+
+Develop a C++ program to reverse an integer using pointers.
+
+
+Solution:
+
+#include <iostream>
+
+using namespace std;
+
+void reverse(int a, int *reversed){ 
+   int remainder;
+   *reversed=0;
+   
+   while(a!=0){
+       remainder=a%10;
+       *reversed=*reversed*10+remainder;
+       a/=10;
+   };
+};
+int main(){
+    int a,reversed;
+    cout<<"Enter the number to reverse it."<<endl;
+    cin>>a;
+    
+    reverse(a,&reversed);
+    
+    cout<<"The initial number is "<<a<<" and the reversed is "<<reversed<<endl;
+    
+    return 0;
+}
