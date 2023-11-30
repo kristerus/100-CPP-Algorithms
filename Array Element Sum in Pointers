@@ -1,0 +1,40 @@
+Question:
+
+Write a program to find the sum of elements in an array using pointers.
+
+
+Solution:
+
+#include <iostream>
+using namespace std;
+
+int sum(int *arr,int size){
+    int sum=0;
+    for(int i=0;i<size;i++){
+        sum+=*(arr+i);
+    };
+    return sum;
+}
+
+int main() {
+    int size;
+    cout << "Enter the size of the array: ";
+    cin >> size;
+    
+    if (size <= 0) {
+        cout << "Invalid array size." << endl;
+        return 1;
+    };
+    
+    int array[size];
+    cout<<"Enter the array elements: "<<endl;
+    for(int i=0;i<size;++i){
+        cin>>array[i];
+    };
+    
+    int *ptr=array;
+    int sumed=sum(ptr,size);
+    cout<<"The sum of the array elements is "<<sumed<<endl;
+    
+    return 0;
+
