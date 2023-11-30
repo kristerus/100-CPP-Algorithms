@@ -1,0 +1,34 @@
+Question:
+
+Write a function to check if a number is a perfect number or not.
+
+
+
+
+Solution:
+
+#include <iostream>
+
+using namespace std;
+
+bool perfectNumber(int a){
+    int sum=0;
+    for(int i=1;i<a;i++){
+        if(a%i==0){
+            sum+=i;
+        };
+    };
+    if(sum==a){
+        return true;
+    }
+    else{
+        return false;
+    };
+}
+int main(){
+    int a;
+    cout<<"Enter the number to find whether it is perfect or not: ";
+    cin>>a;
+    perfectNumber(a)?cout<<"The number is perfect":cout<<"The number is not perfect";
+    return 0;
+}
