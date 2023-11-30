@@ -1,0 +1,30 @@
+Question:
+
+Implement a program to swap two numbers using call by reference.
+
+
+Solution:
+
+#include <iostream>
+
+using namespace std;
+
+void swapper(int &a, int &b){
+    int temp=a;
+    a=b;
+    b=temp;
+}
+   
+int main(){
+    int a,b;
+    cout<<"Enter the first number: "<<endl;
+    cin>>a;
+    cout<<"Enter the second number: "<<endl;
+    cin>>b;
+    cout<<"The initial numbers are "<<a<<" and "<<b<<endl;
+    swapper(a,b);
+
+    cout<<"The new numbers are "<<a<<" and "<<b<<endl;
+    
+    return 0;
+}
