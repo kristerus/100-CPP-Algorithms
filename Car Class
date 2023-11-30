@@ -1,0 +1,33 @@
+Question:
+
+Create a class representing a car with attributes and methods.
+
+Solution:
+
+
+#include <iostream>
+
+using namespace std;
+
+class Car{
+    public:
+    string brand;
+    int year;
+    int getYear(){
+        return year;
+    };
+    string getBrand(){
+        return brand;
+    }
+};
+
+
+int main(){
+    Car myCar;
+    myCar.year=2005;
+    myCar.brand="Benz";
+    cout<<myCar.getYear()<<endl;
+    cout<<myCar.getBrand()<<endl;
+
+return 0;
+}
