@@ -1,0 +1,35 @@
+Question:
+
+Create a program to demonstrate the use of constructors and destructors.
+
+
+Solution:
+
+
+#include <iostream>
+
+class Example {
+public:
+    // Constructor
+    Example() {
+        std::cout << "Constructor called" << std::endl;
+    }
+
+    // Destructor
+    ~Example() {
+        std::cout << "Destructor called" << std::endl;
+    }
+};
+
+int main() {
+    std::cout << "Creating object 1" << std::endl;
+    Example obj1; 
+
+    std::cout << "\nCreating object 2" << std::endl;
+    Example obj2; 
+
+    std::cout << "\nExiting the scope, destructors will be called automatically" << std::endl;
+    // Destructors are automatically called when objects go out of scope
+
+    return 0;
+}
