@@ -1,0 +1,28 @@
+Question:
+
+Develop a program to show how to handle exception handling in C++.
+
+Solution:
+
+#include <iostream>
+
+void division(int a, int b) {
+    if (b == 0) {
+        throw "Division by zero error"; // Throwing an exception (string message)
+    }
+
+    int result = a / b;
+    std::cout << "Result of division: " << result << std::endl;
+}
+
+int main() {
+    int x = 10, y = 0;
+
+    try {
+        division(x, y);
+    } catch (const char* errorMessage) { // Catching the thrown exception (string message)
+        std::cerr << "Exception caught: " << errorMessage << std::endl;
+    }
+
+    return 0;
+}
