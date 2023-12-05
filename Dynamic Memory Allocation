@@ -1,0 +1,41 @@
+Question:
+
+Create a program to dynamically allocate memory for an array and perform operations.
+
+Solution:
+
+#include <iostream>
+
+int main() {
+    int size;
+
+    std::cout << "Enter the size of the array: ";
+    std::cin >> size;
+
+    // Dynamically allocate memory for an integer array of size 'size'
+    int* dynamicArray = new int[size];
+
+    // Check if memory allocation is successful
+    if (dynamicArray == nullptr) {
+        std::cout << "Memory allocation failed!" << std::endl;
+        return 1;
+    }
+
+    std::cout << "Enter " << size << " elements:" << std::endl;
+
+    // Input elements into the dynamically allocated array
+    for (int i = 0; i < size; ++i) {
+        std::cin >> dynamicArray[i];
+    }
+
+    std::cout << "Elements entered: ";
+    for (int i = 0; i < size; ++i) {
+        std::cout << dynamicArray[i] << " ";
+    }
+    std::cout << std::endl;
+
+    // Deallocate memory to prevent memory leaks
+    delete[] dynamicArray;
+
+    return 0;
+}
