@@ -1,0 +1,44 @@
+Question:
+
+Implement a program to find the frequency of elements in an array using pointers.
+
+
+Solution:
+
+#include <iostream>
+
+void findFrequency(int* arr, int size) {
+    for (int i = 0; i < size; ++i) {
+        if (arr[i] != INT_MIN) {
+            int count = 1;
+            for (int j = i + 1; j < size; ++j) {
+                if (arr[i] == arr[j]) {
+                    count++;
+                    arr[j] = INT_MIN; // Mark repeated elements to avoid recounting
+                }
+            }
+            std::cout << "Frequency of " << arr[i] << " is " << count << std::endl;
+        }
+    }
+}
+
+int main() {
+    int size;
+
+    std::cout << "Enter the size of the array: ";
+    std::cin >> size;
+
+    int* arr = new int[size];
+
+    std::cout << "Enter " << size << " elements:" << std::endl;
+    for (int i = 0; i < size; ++i) {
+        std::cin >> arr[i];
+    }
+
+    std::cout << "Frequency of elements in the array:" << std::endl;
+    findFrequency(arr, size);
+
+    delete[] arr;
+
+    return 0;
+}
