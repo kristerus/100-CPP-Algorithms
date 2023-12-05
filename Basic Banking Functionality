@@ -1,0 +1,50 @@
+Question:
+
+Create a class representing a bank account and perform basic operations.
+
+
+
+Solution:
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Bank{
+    private: 
+    int value;
+    string bankholderName;
+    public:
+    string getName(void){
+        return bankholderName;
+    };
+    void setName(string name){
+        bankholderName=name;
+    };
+    int getValue(){
+        return value;
+    };
+    void setValue(double sum){
+        value=sum;
+    };
+    int deposit(double sum){
+        value+=sum;
+        return value;
+    };
+    int withdraw(double sum){
+        value-=sum;
+        return value;
+    };
+};
+    
+int main(){
+    Bank account;
+    account.setName("Kristerus");
+    cout<<"This accounts holder is named "<<account.getName()<<endl;
+    account.setValue(5000);
+    cout<<"This accounts balance is "<<account.getValue()<<endl;
+    cout<<"Balance after depositing 3000 will be "<<account.deposit(3000)<<endl;
+    cout<<"Balance after withdrawing 3000 will be "<<account.withdraw(3000)<<endl;
+
+  return 0;
+}
