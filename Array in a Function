@@ -1,0 +1,35 @@
+Question: 
+
+Develop a program to pass an array to a function and modify its elements.
+
+
+Solution:
+
+#include <iostream>
+void modifyArray(int arr[], int size) {
+    for (int i = 0; i < size; ++i) {
+        arr[i] += 10;
+    };
+};
+
+int main() {
+    const int maxSize = 5;
+    int myArray[maxSize] = {2, 5, 8, 10, 12};
+
+    std::cout << "Original array elements:" << std::endl;
+    for (int i = 0; i < maxSize; ++i) {
+        std::cout << myArray[i] << " ";
+    };
+    std::cout << std::endl;
+
+    // Passing the array to the function to modify its elements
+    modifyArray(myArray, maxSize);
+
+    std::cout << "Modified array elements after function call:" << std::endl;
+    for (int i = 0; i < maxSize; ++i) {
+        std::cout << myArray[i] << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
