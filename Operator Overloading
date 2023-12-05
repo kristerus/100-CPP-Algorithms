@@ -1,0 +1,47 @@
+Question:
+
+Implement operator overloading for adding two complex numbers.
+
+
+Solution:
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Complex{
+    private:
+    double imag;
+    double real;
+    
+    public:
+    Complex(double r=0.0,double i=0.0): real(r), imag(i) {};
+    
+     Complex operator+(const Complex& other) {
+        Complex temp;
+        temp.real = real + other.real;
+        temp.imag = imag + other.imag;
+        return temp;
+    };
+    
+    void display() {
+        cout << "Complex number: " << real << " + " << imag << "i" << endl;
+    }
+};
+
+int main() {
+  Complex c1(3.5, 2.0);
+    Complex c2(1.5, 4.5);
+    Complex result;
+
+    std::cout << "First complex number:" << std::endl;
+    c1.display();
+    std::cout << "\nSecond complex number:" << std::endl;
+    c2.display();
+
+    result = c1 + c2;
+
+    std::cout << "\nResult of addition:" << std::endl;
+    result.display();
+    return 0;
+}
