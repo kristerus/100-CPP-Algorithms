@@ -1,0 +1,38 @@
+Question:
+
+Write a program to demonstrate the use of static members in a class.
+
+Solution:
+
+#include <iostream>
+
+class MyClass {
+private:
+    static int count;
+
+public:
+    MyClass() {
+        count++; // Increment count each time an object is created
+    }
+
+    static int getCount() {
+        return count;
+    }
+};
+
+int MyClass::count = 0;
+
+int main() {
+    std::cout << "Initially, count: " << MyClass::getCount() << std::endl;
+
+    MyClass obj1;
+    MyClass obj2;
+
+    std::cout << "After creating two objects, count: " << MyClass::getCount() << std::endl;
+
+    MyClass obj3;
+
+    std::cout << "After creating three objects, count: " << MyClass::getCount() << std::endl;
+
+    return 0;
+}
